@@ -12,7 +12,18 @@ namespace Dilan
     {  
         public static void Main()
         {
-            GenericMethod();
+            var grades = new Pair<String, int>[5];
+            
+            grades[0] = new Pair<string, int>("Jonathan", 5);
+            grades[1] = new Pair<string, int>("Test", 2);
+            grades[2] = new Pair<string, int>("Langley", 100);
+
+       
+
+            Generics.WriteElements<Pair<String, int>>(grades);
+
+            /*var newPair = new Pair<string, char>("test", 't');
+            Console.WriteLine(newPair);*/
         } 
         
         private static void Print(string line)
